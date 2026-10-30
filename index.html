@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday Flávio's 2026</title>
+<meta name="description" content="Black Friday Flávio's: calçados, tênis, moda e acessórios feminino, masculino, infantil e esportivo. Confira os valores e acesse o catálogo completo.">
+<meta name="theme-color" content="#05070d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#05070d;
+  --bg-2:#0a0e1a;
+  --surface:#0f1424;
+  --surface-2:#151c33;
+  --border:rgba(255,255,255,.09);
+  --primary:#0038a8;      /* azul Flávio's (logo) */
+  --primary-hi:#2f6bff;   /* azul elétrico dos selos 3D */
+  --accent:#ffc20e;       /* amarelo "entende" */
+  --t1:#ffffff;
+  --t2:#b9c2d9;
+  --t3:#7b86a3;
+  --radius:20px;
+  --wrap:1200px;
+  --font:'Archivo',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--t1);font-family:var(--font);font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+
+/* Tipografia de campanha: expandida + itálica, inspirada no logotipo */
+.display{font-stretch:125%;font-style:italic;font-weight:800;letter-spacing:-.02em;line-height:1.02;text-transform:uppercase}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-stretch:110%;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.kicker::before{content:"";width:22px;height:3px;background:var(--accent);transform:skewX(-20deg)}
+h2.display{font-size:clamp(30px,4.4vw,52px);margin:14px 0 18px}
+.lead{color:var(--t2);font-size:clamp(16px,1.6vw,19px);max-width:640px}
+.hl{color:var(--accent)}
+
+/* Placeholder de conteúdo pendente de validação do cliente */
+.tbd{display:inline-block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-style:normal;font-weight:600;font-size:.78em;letter-spacing:0;text-transform:none;color:var(--accent);background:rgba(255,194,14,.08);border:1.5px dashed rgba(255,194,14,.6);border-radius:8px;padding:.1em .45em;vertical-align:middle;line-height:1.4}
+.tbd-block{display:flex;align-items:center;justify-content:center;text-align:center;min-height:96px;padding:20px;border-radius:16px}
+.price-tbd{font-family:var(--font);font-weight:800;font-size:inherit;padding:0 .2em;border-radius:.2em}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:18px 30px;font-weight:800;font-stretch:112%;font-size:16px;letter-spacing:.01em;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--accent);color:#0a0a0a;box-shadow:0 10px 30px -8px rgba(255,194,14,.55)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 36px -8px rgba(255,194,14,.7)}
+.btn-blue{background:var(--primary-hi);color:#fff;box-shadow:0 10px 30px -8px rgba(47,107,255,.6)}
+.btn-blue:hover{transform:translateY(-2px);background:#4a7fff}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25)}
+.btn-ghost:hover{border-color:#fff}
+.btn:focus-visible,.cat:focus-visible{outline:3px solid var(--primary-hi);outline-offset:3px}
+
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:rgba(5,7,13,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.header img{height:30px;width:auto}
+.nav{display:flex;gap:28px;font-size:14px;font-weight:600;color:var(--t2)}
+.nav a{text-decoration:none}
+.nav a:hover{color:#fff}
+.header .btn{padding:12px 22px;font-size:14px}
+
+/* Hero */
+.hero{position:relative;padding:72px 0 0;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:900px;height:900px;background:radial-gradient(closest-side,rgba(47,107,255,.45),rgba(0,56,168,.15) 55%,transparent 72%);z-index:-1}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000 0%,transparent 85%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 85%);z-index:-2}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:24px;min-height:560px}
+.hero h1{font-size:clamp(38px,5.6vw,76px);margin:20px 0 24px}
+.hero h1 .bf{display:block;-webkit-text-stroke:0;color:#fff}
+.hero h1 .from{display:block;font-size:.46em;font-stretch:115%;color:var(--t2);margin-top:.35em;letter-spacing:0}
+.hero h1 .price{display:inline-block;color:#0a0a0a;background:var(--accent);padding:.04em .28em .08em;border-radius:.16em;transform:skewX(-8deg);margin-top:.1em}
+.hero h1 .price>span{display:inline-block;transform:skewX(8deg)}
+.hero h1 .price .tbd{color:#0a0a0a;border-color:rgba(0,0,0,.45);background:rgba(0,0,0,.06);font-size:.62em}
+.hero .lead{margin-bottom:34px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-art{position:relative;height:100%;min-height:480px}
+.hero-art .tag{position:absolute;width:min(380px,82%);right:-10px;top:20px;filter:drop-shadow(0 40px 60px rgba(0,0,0,.6));animation:float 7s ease-in-out infinite}
+.hero-art .ribbon{position:absolute;width:min(130px,30%);left:6%;bottom:0;z-index:2;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6));animation:float 6s ease-in-out -2s infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(2deg)}}
+
+/* Faixa marquee */
+.marquee{margin-top:56px;background:var(--primary-hi);transform:rotate(-1.6deg);border-block:2px solid #0a0a0a;overflow:hidden;position:relative;z-index:2;width:104%;margin-left:-2%}
+.marquee-track{display:flex;width:max-content;animation:marq 26s linear infinite}
+.marquee span{font-stretch:125%;font-style:italic;font-weight:800;font-size:20px;text-transform:uppercase;padding:14px 0;white-space:nowrap}
+.marquee span::after{content:"✦";margin:0 26px;color:var(--accent)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* Seções */
+section{position:relative}
+.sec{padding:104px 0;border-top:1px solid var(--border)}
+.sec-head{margin-bottom:52px}
+.sec-head.center{text-align:center}
+.sec-head.center .lead{margin:0 auto}
+
+/* Vitrine de categorias */
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.cat{grid-column:span 2;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;text-align:left;color:inherit;padding:0}
+.cat:nth-child(4),.cat:nth-child(5){grid-column:span 3}
+.cat:hover{transform:translateY(-4px);border-color:rgba(47,107,255,.6);box-shadow:0 24px 50px -20px rgba(47,107,255,.45)}
+.cat-media{position:relative;background:#fff;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.cat:nth-child(4),.cat:nth-child(5){flex-direction:row}
+.cat:nth-child(4) .cat-media,.cat:nth-child(5) .cat-media{aspect-ratio:auto;width:48%;flex:none}
+.cat:nth-child(4) .cat-body,.cat:nth-child(5) .cat-body{justify-content:center}
+.cat-media img{width:78%;height:88%;object-fit:contain;transition:transform .4s ease}
+.cat:hover .cat-media img{transform:scale(1.06) rotate(-2deg)}
+.cat-media .flag{position:absolute;top:14px;left:14px;background:#0a0a0a;color:#fff;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:7px 11px;border-radius:999px;font-stretch:110%}
+.cat-media .flag b{color:var(--accent)}
+.cat-body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cat-name{font-stretch:125%;font-style:italic;font-weight:800;font-size:26px;text-transform:uppercase;letter-spacing:-.01em}
+.cat-price{font-weight:700;font-size:15px;color:var(--t2)}
+.cat-price strong{display:block;font-stretch:115%;font-weight:900;font-size:34px;color:var(--accent);line-height:1.1;margin-top:2px}
+.cat-price .tbd{font-size:.55em}
+.cat-desc{color:var(--t3);font-size:15px;margin:6px 0 18px}
+.cat-cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:space-between;gap:10px;background:var(--surface-2);border:1px solid var(--border);border-radius:999px;padding:13px 18px;font-weight:700;font-size:14px;transition:background .2s ease}
+.cat:hover .cat-cta{background:var(--primary-hi);border-color:var(--primary-hi)}
+.cat-cta svg{width:16px;height:16px}
+
+/* Cartão Flávio's */
+.pay{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}
+.pay-card{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:56px;border-radius:28px;background:linear-gradient(135deg,var(--primary) 0%,#0b2a7a 55%,#071233 100%);overflow:hidden;isolation:isolate}
+.pay-card::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(47,107,255,.7),transparent);z-index:-1}
+.pay-card .kicker{color:var(--accent)}
+.pay-card h2.display{font-size:clamp(28px,3.4vw,44px)}
+.pay-card .lead{color:#d6def5}
+.pay-cond{margin:28px 0 14px;padding:22px 24px;border-radius:16px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.14)}
+.pay-cond p{font-stretch:118%;font-weight:800;font-size:clamp(20px,2.4vw,28px);line-height:1.2}
+.pay-cond .tbd{font-size:.6em}
+.pay-note{color:#c3cdea;font-size:15px;margin-bottom:28px;max-width:520px}
+.card-visual{position:relative;aspect-ratio:1.586;max-width:400px;width:100%;margin-left:auto;border-radius:22px;padding:26px;background:linear-gradient(130deg,#0d0f16 0%,#1c2236 60%,#0d0f16 100%);border:1px solid rgba(255,255,255,.16);box-shadow:0 40px 70px -24px rgba(0,0,0,.7);transform:rotate(-6deg);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.card-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.12) 45%,transparent 60%)}
+.card-visual img{height:24px;width:auto}
+.card-chip{width:46px;height:34px;border-radius:7px;background:linear-gradient(135deg,#f9d976,#c79a2b)}
+.card-visual .card-foot{display:flex;justify-content:space-between;align-items:flex-end;font-size:12px;letter-spacing:.2em;color:#aab3cc;font-weight:600}
+.card-visual .card-foot b{color:var(--accent);font-stretch:125%;font-style:italic;font-size:16px;letter-spacing:.02em}
+
+/* Lojas */
+.stores{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.stores .lead{margin-bottom:28px}
+.finder{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px}
+.finder-label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:12px}
+.finder-row{display:flex;gap:10px;margin-bottom:18px}
+.finder select{flex:1;appearance:none;-webkit-appearance:none;background:var(--surface-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23b9c2d9' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 18px center;border:1px solid var(--border);border-radius:12px;color:var(--t1);padding:15px 44px 15px 16px;font:inherit;font-size:16px}
+.finder .tbd-block{min-height:150px;margin-bottom:16px}
+.finder-note{display:flex;gap:10px;color:var(--t3);font-size:14px}
+.finder-note svg{flex:none;width:18px;height:18px;margin-top:2px;color:var(--primary-hi)}
+
+/* Institucional */
+.about{text-align:center;overflow:hidden}
+.about .years{font-stretch:125%;font-style:italic;font-weight:900;font-size:clamp(120px,20vw,260px);line-height:.85;letter-spacing:-.04em;background:linear-gradient(180deg,var(--primary-hi),rgba(47,107,255,.05));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:-.18em;user-select:none}
+.about h2{position:relative}
+.about .lead{margin:0 auto 40px}
+.brands .tbd-block{min-height:88px}
+
+/* FAQ */
+.faq-list{max-width:860px;margin:0 auto;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.faq-list details{border-top:1px solid var(--border)}
+.faq-list details:first-child{border-top:0}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 28px;font-weight:700;font-size:18px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary .ic{flex:none;width:32px;height:32px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;transition:transform .25s ease,background .25s ease}
+.faq-list details[open] summary .ic{transform:rotate(45deg);background:var(--primary-hi)}
+.faq-list .ans{padding:0 28px 26px;color:var(--t2);display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.faq-obs{max-width:860px;margin:20px auto 0;text-align:center}
+
+/* CTA final */
+.final{padding:0 0 112px;border-top:0}
+.final-card{position:relative;text-align:center;padding:84px 32px;border-radius:32px;background:radial-gradient(120% 140% at 50% 0%,rgba(47,107,255,.5) 0%,rgba(0,56,168,.25) 40%,var(--surface) 75%);border:1px solid rgba(47,107,255,.35);overflow:hidden;isolation:isolate}
+.final-card .lead{margin:0 auto 34px}
+.final-card .deco{position:absolute;width:170px;opacity:.9;z-index:-1}
+.final-card .deco.l{left:-30px;bottom:-30px;transform:rotate(-18deg)}
+.final-card .deco.r{right:-20px;top:-26px;transform:rotate(16deg);width:150px}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.3fr repeat(3,1fr);gap:32px;margin-bottom:40px}
+.foot-grid img{height:28px;width:auto;margin-bottom:14px}
+.foot-grid h4{color:var(--t1);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.foot-grid .item{margin-bottom:16px}
+.foot-grid .item .tbd{font-size:12px}
+.foot-legal{border-top:1px solid var(--border);padding-top:24px;font-size:13px;font-style:italic;line-height:1.6}
+.foot-legal p+p{margin-top:8px;font-style:normal}
+
+/* Barra fixa mobile */
+.mbar{display:none}
+
+/* Modal */
+.modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(3,5,10,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s}
+.modal.open{opacity:1;visibility:visible}
+.modal-box{position:relative;width:100%;max-width:460px;background:var(--surface);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:36px 30px 28px;box-shadow:0 40px 90px -20px rgba(0,0,0,.8);transform:translateY(16px) scale(.98);transition:transform .3s ease;max-height:calc(100dvh - 40px);overflow:auto}
+.modal.open .modal-box{transform:none}
+.modal-box .x{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:0;background:var(--surface-2);color:#fff;font-size:22px;line-height:1}
+.modal-tag{width:96px;margin:0 auto;transform:rotate(-8deg);filter:drop-shadow(0 16px 20px rgba(0,0,0,.5))}
+.modal-box h3{font-stretch:118%;font-weight:800;font-size:23px;line-height:1.2;margin:14px 0 8px;text-align:center}
+.modal-cat{text-align:center;margin-bottom:22px;min-height:22px}
+.modal-cat span{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#0a0a0a;background:var(--accent);padding:5px 12px;border-radius:999px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:6px;color:var(--t2)}
+.field input{width:100%;background:var(--bg-2);border:1.5px solid var(--border);border-radius:12px;color:#fff;padding:15px 16px;font:inherit;font-size:16px;transition:border-color .2s}
+.field input:focus{outline:0;border-color:var(--primary-hi)}
+.field input[aria-invalid="true"]{border-color:#ff5a5a}
+.field .err{display:none;color:#ff7a7a;font-size:13px;margin-top:6px}
+.field input[aria-invalid="true"]+.err{display:block}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--t2);margin:6px 0 18px;cursor:pointer}
+.check input{margin-top:3px;width:18px;height:18px;accent-color:var(--primary-hi);flex:none}
+.modal-box .btn{width:100%}
+.privacy{font-size:12px;color:var(--t3);text-align:center;margin-top:14px}
+.privacy a{color:var(--t2)}
+.success{display:none;text-align:center;padding:10px 0}
+.success .ok{width:64px;height:64px;border-radius:50%;background:var(--accent);color:#0a0a0a;display:grid;place-items:center;margin:28px auto 18px}
+.success p{color:var(--t2);margin-bottom:18px}
+.modal-box.done form{display:none}
+.modal-box.done .success{display:block}
+
+/* Animação de entrada */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* Responsivo */
+@media (max-width:900px){
+  .wrap{padding:0 20px}
+  .nav{display:none}
+  .header .wrap{height:64px}
+  .header img{height:24px}
+  .hero{padding-top:40px}
+  .hero-grid{grid-template-columns:1fr;min-height:0;gap:0}
+  .hero-art{order:-1;min-height:220px;margin-bottom:8px}
+  .hero-art{min-height:0;height:180px;margin-bottom:0}
+  .hero-art .tag{width:210px;right:-10px;top:0}
+  .sec{padding:72px 0}
+  .cats{grid-template-columns:1fr 1fr;gap:14px}
+  .cat,.cat:nth-child(4),.cat:nth-child(5){grid-column:span 1}
+  .cat:nth-child(5){grid-column:span 2}
+  .cat:nth-child(4){flex-direction:column}
+  .cat:nth-child(4) .cat-media{aspect-ratio:4/3;width:auto}
+  .pay-card{grid-template-columns:1fr;padding:36px 24px;gap:20px}
+  .card-visual{margin:10px auto 0;max-width:320px;order:-1}
+  .stores{grid-template-columns:1fr;gap:28px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-grid>div:first-child{grid-column:span 2}
+  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(5,7,13,0),rgba(5,7,13,.92) 35%);transform:translateY(110%);transition:transform .3s ease}
+  .mbar.show{transform:none}
+  .mbar .btn{width:100%}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .header .btn{padding:10px 16px;font-size:13px}
+  .hero-ctas .btn{width:100%}
+  .marquee{margin-top:40px}
+  .marquee span{font-size:16px;padding:11px 0}
+  .sec{padding:60px 0}
+  .sec-head{margin-bottom:32px}
+  .cat-body{padding:16px 14px 16px}
+  .cat-name{font-size:18px}
+  .cat-price{font-size:13px}
+  .cat-price strong{font-size:24px}
+  .cat-desc{font-size:13px;margin:4px 0 14px}
+  .cat-cta{padding:11px 14px;font-size:12.5px}
+  .cat-cta svg{display:none}
+  .cat-media .flag{font-size:9px;padding:5px 8px;top:10px;left:10px}
+  .pay-card .btn,.stores .btn,.final-card .btn{width:100%}
+  .finder{padding:20px}
+  .faq-list summary{padding:20px;font-size:16px}
+  .faq-list .ans{padding:0 20px 22px;font-size:15px}
+  .final-card{padding:60px 20px}
+  .final-card .deco{width:110px}
+  .final-card .deco.r{width:96px}
+  .foot-grid{grid-template-columns:1fr}
+  .foot-grid>div:first-child{grid-column:auto}
+  .modal{align-items:flex-end;padding:0}
+  .modal-box{border-radius:24px 24px 0 0;max-width:none;padding:34px 20px calc(24px + env(safe-area-inset-bottom))}
+}
+@media (max-width:340px){
+  .cats{grid-template-columns:1fr}
+  .cat:nth-child(5){grid-column:span 1}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a href="#topo" aria-label="Flávio's"><img src="assets/logo-branco.webp" alt="Flávio's" width="600" height="127"></a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#categorias">Categorias</a>
+      <a href="#cartao">Cartão Flávio's</a>
+      <a href="#lojas">Lojas</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <!-- COPY: CTA -->
+    <button class="btn btn-primary js-open" data-cat="header">Ver catálogo de ofertas</button>
+  </div>
+</header>
+
+<main id="topo">
+
+<!-- ===== SEÇÃO 01 | HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <!-- COPY -->
+      <span class="kicker">BLACK FRIDAY FLÁVIO'S 2026</span>
+      <h1 class="display">
+        <span class="bf">Black Friday Flávio's</span>
+        <span class="from">com ofertas a partir de</span>
+        <span class="price"><span>R$ <span class="tbd">[VALOR]</span></span></span>
+      </h1>
+      <p class="lead">Calçados, tênis, moda e acessórios feminino, masculino, infantil e esportivo. Confira os valores e acesse o catálogo completo.</p>
+      <div class="hero-ctas">
+        <button class="btn btn-primary js-open" data-cat="hero">Ver catálogo de ofertas
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img class="tag" src="assets/tag.webp" alt="" width="720" height="569">
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span>
+      <span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 02 | CATEGORIAS ===== -->
+<section class="sec" id="categorias" style="border-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <!-- COPY -->
+      <span class="kicker">Escolha sua categoria</span>
+      <h2 class="display">Tem oferta para o seu estilo, sua rotina e para <span class="hl">toda a família</span></h2>
+      <p class="lead">Esportivo, feminino, infantil, masculino e acessórios com preços a partir de R$ <span class="tbd">[VALOR]</span>. Escolha a categoria que você quer ver primeiro e confira os produtos que entraram na Black Friday.</p>
+    </div>
+
+    <div class="cats">
+      <!-- COPY: Esportivo -->
+      <button class="cat reveal js-open" data-cat="esportivo">
+        <div class="cat-media"><span class="flag">Black <b>Friday</b></span><img src="assets/cat-esportivo.webp" alt="Tênis esportivo" loading="lazy" width="640" height="640"></div>
+        <div class="cat-body">
+          <span class="cat-name">Esportivo</span>
+          <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
+          <span class="cat-desc">Tênis e produtos esportivos selecionados para a Black Friday.</span>
+          <span class="cat-cta">Ver ofertas de esportivos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </button>
+      <!-- COPY: Feminino -->
+      <button class="cat reveal js-open" data-cat="feminino">
+        <div class="cat-media"><span class="flag">Black <b>Friday</b></span><img src="assets/cat-feminino.webp" alt="Sandália feminina" loading="lazy" width="640" height="640"></div>
+        <div class="cat-body">
+          <span class="cat-name">Feminino</span>
+          <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
+          <span class="cat-desc">Calçados femininos participantes da campanha.</span>
+          <span class="cat-cta">Ver ofertas femininas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </button>
+      <!-- COPY: Infantil -->
+      <button class="cat reveal js-open" data-cat="infantil">
+        <div class="cat-media"><span class="flag">Black <b>Friday</b></span><img src="assets/cat-infantil.webp" alt="Sandália infantil" loading="lazy" width="640" height="640"></div>
+        <div class="cat-body">
+          <span class="cat-name">Infantil</span>
+          <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
+          <span class="cat-desc">Calçados infantis em diferentes modelos e numerações, conforme disponibilidade.</span>
+          <span class="cat-cta">Ver ofertas infantis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </button>
+      <!-- COPY: Masculino -->
+      <button class="cat reveal js-open" data-cat="masculino">
+        <div class="cat-media"><span class="flag">Black <b>Friday</b></span><img src="assets/cat-masculino.webp" alt="Tênis masculino" loading="lazy" width="640" height="564"></div>
+        <div class="cat-body">
+          <span class="cat-name">Masculino</span>
+          <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
+          <span class="cat-desc">Tênis e calçados masculinos selecionados para a Black Friday.</span>
+          <span class="cat-cta">Ver ofertas masculinas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </button>
+      <!-- COPY: Acessórios -->
+      <button class="cat reveal js-open" data-cat="acessorios">
+        <div class="cat-media"><span class="flag">Black <b>Friday</b></span><img src="assets/cat-acessorios.webp" alt="Mochila" loading="lazy" width="640" height="640"></div>
+        <div class="cat-body">
+          <span class="cat-name">Acessórios</span>
+          <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
+          <span class="cat-desc">Acessórios participantes da campanha.</span>
+          <span class="cat-cta">Ver ofertas de acessórios <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 03 | FACILIDADES DE PAGAMENTO ===== -->
+<section class="sec pay" id="cartao">
+  <div class="wrap">
+    <div class="pay-card reveal">
+      <div>
+        <!-- COPY -->
+        <span class="kicker">Facilidades de pagamento</span>
+        <h2 class="display">Preço de Black Friday com condições do <span class="hl">Cartão Flávio's</span></h2>
+        <p class="lead">Os produtos participantes também poderão contar com condições próprias de pagamento no Cartão Flávio's.</p>
+        <div class="pay-cond">
+          <p>Até <span class="tbd">[X]</span>x <span class="tbd">[CONDIÇÃO APROVADA]</span> no Cartão Flávio's</p>
+        </div>
+        <p class="pay-note">O cartão permite fazer a compra na Flávio's sem utilizar o limite de outros cartões, conforme as regras de concessão e utilização.</p>
+        <button class="btn btn-primary js-open" data-cat="cartao">Quero ver as ofertas</button>
+      </div>
+      <div class="card-visual" aria-hidden="true">
+        <img src="assets/logo-branco.webp" alt="">
+        <div class="card-chip"></div>
+        <div class="card-foot"><span>•••• •••• ••••</span><b>Cartão Flávio's</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 04 | LOJAS ===== -->
+<section class="sec" id="lojas">
+  <div class="wrap stores">
+    <div class="reveal">
+      <!-- COPY -->
+      <span class="kicker">Black friday nas lojas Flávio’s</span>
+      <h2 class="display">Encontre uma loja participante e confira sua <span class="hl">numeração</span></h2>
+      <p class="lead">As ofertas são destinadas às unidades físicas participantes em Goiás e Minas Gerais. Consulte as cidades e lojas da campanha para experimentar os produtos, verificar a numeração e comprar conforme a disponibilidade da unidade.</p>
+      <a class="btn btn-blue" href="#finder">Consultar lojas participantes</a>
+    </div>
+    <div class="finder reveal" id="finder">
+      <p class="finder-label">Lojas participantes</p>
+      <div class="finder-row">
+        <select aria-label="Cidade" disabled>
+          <option>GO / MG</option>
+        </select>
+      </div>
+      <div class="tbd tbd-block">[INSERIR BUSCA SIMPLES / LISTA DE CIDADES E UNIDADES PARTICIPANTES]</div>
+      <p class="finder-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01" stroke-linecap="round"/></svg>
+        <!-- COPY -->
+        <span>Produtos, preços, cores, numerações e estoques podem variar de uma loja para outra.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 05 | INSTITUCIONAL ===== -->
+<section class="sec about">
+  <div class="wrap">
+    <div class="years reveal" aria-hidden="true">48</div>
+    <div class="reveal">
+      <!-- COPY -->
+      <span class="kicker">Flávio’s Calçados e Esportes</span>
+      <h2 class="display">48 anos de Flávio's em <span class="hl">Goiás e Minas Gerais</span></h2>
+      <p class="lead">A rede reúne calçados, tênis, moda e acessórios para diferentes pessoas da família, com lojas físicas em cidades das duas regiões. Na loja, você pode experimentar o produto, conferir a numeração e levar a compra na hora, conforme disponibilidade.</p>
+    </div>
+    <div class="brands reveal">
+      <div class="tbd tbd-block">[SE APROVADO: INSERIR FAIXA COM MARCAS PARTICIPANTES DA BLACK FRIDAY]</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 06 | FAQ ===== -->
+<section class="sec" id="duvidas">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <!-- COPY -->
+      <span class="kicker">Dúvidas frequentes e regras comerciais</span>
+      <h2 class="display">Confira as regras antes de escolher suas <span class="hl">ofertas</span></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>Até quando são válidas as ofertas? <span class="ic">+</span></summary>
+        <div class="ans">
+          <span class="tbd">[inserir período da campanha]</span>
+          <p>As ofertas são válidas durante o período aprovado para a campanha e enquanto houver disponibilidade dos produtos participantes no estoque.</p>
+        </div>
+      </details>
+      <details>
+        <summary>As condições são iguais em todas as lojas? <span class="ic">+</span></summary>
+        <div class="ans">
+          <span class="tbd">[validar regra comercial com o cliente]</span>
+          <p class="tbd">Informar aqui se preços e condições serão os mesmos em todas as unidades participantes ou se poderão variar conforme a loja.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Como consultar a disponibilidade de numeração? <span class="ic">+</span></summary>
+        <div class="ans"><p>Consulte a unidade onde pretende realizar a compra. Cores, modelos, numerações e estoque podem variar entre as lojas.</p></div>
+      </details>
+      <details>
+        <summary>Posso utilizar o Cartão Flávio's? <span class="ic">+</span></summary>
+        <div class="ans">
+          <p>Sim, conforme as condições aprovadas para a Black Friday e as regras de concessão e utilização do cartão.</p>
+          <span class="tbd">[inserir o parcelamento definitivo após validação.]</span>
+        </div>
+      </details>
+      <details>
+        <summary>Como consultar as lojas participantes? <span class="ic">+</span></summary>
+        <div class="ans"><p>Use a consulta de lojas desta página para verificar as cidades e unidades que participam da campanha.</p></div>
+      </details>
+      <details>
+        <summary>Preciso preencher meus dados para acessar o catálogo? <span class="ic">+</span></summary>
+        <div class="ans"><p>Sim. Nome e telefone são solicitados para liberar o catálogo promocional. A autorização para receber futuras comunicações da Flávio's deve ser solicitada separadamente.</p></div>
+      </details>
+    </div>
+    <div class="faq-obs reveal"><span class="tbd">[Obs.: inserir as demais condições promocionais aprovadas pelo cliente.]</span></div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 07 | CTA FINAL ===== -->
+<section class="sec final">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <img class="deco l" src="assets/tag.webp" alt="" aria-hidden="true" loading="lazy">
+      <img class="deco r" src="assets/ribbon.webp" alt="" aria-hidden="true" loading="lazy">
+      <!-- COPY -->
+      <span class="kicker">Não fique de fora</span>
+      <h2 class="display">Quer ver quais produtos entraram na <span class="hl">Black?</span></h2>
+      <p class="lead">Acesse o catálogo completo para conferir os modelos e preços da campanha antes de ir à loja.</p>
+      <button class="btn btn-primary js-open" data-cat="cta-final">Ver catálogo de ofertas
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/logo-branco.webp" alt="Flávio's" loading="lazy">
+        <!-- COPY -->
+        <p style="color:var(--t1);font-weight:700">Flávio's Calçados e Esportes</p>
+      </div>
+      <div>
+        <div class="item"><h4>CNPJ</h4><span class="tbd">[AGUARDANDO INFORMAÇÃO]</span></div>
+        <div class="item"><h4>Contato</h4><span class="tbd">[AGUARDANDO E-MAIL / TELEFONE]</span></div>
+      </div>
+      <div>
+        <div class="item"><h4>Política de Privacidade</h4><span class="tbd">[INSERIR LINK]</span></div>
+        <div class="item"><h4>Lojas participantes</h4><span class="tbd">[INSERIR LINK]</span></div>
+      </div>
+      <div>
+        <div class="item"><h4>Regulamento da Black Friday</h4><span class="tbd">[INSERIR LINK / CONDIÇÕES APROVADAS]</span></div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <!-- COPY -->
+      <p>*Ofertas válidas nas unidades participantes, durante o período informado e enquanto houver disponibilidade. Preços, modelos, cores e numerações podem variar conforme a loja. Consulte as condições completas da campanha.</p>
+      <p>© 2026 Flávio's Calçados e Esportes</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Barra fixa mobile -->
+<div class="mbar" id="mbar">
+  <button class="btn btn-primary js-open" data-cat="barra-mobile">Ver catálogo de ofertas</button>
+</div>
+
+<!-- ===== MODAL DE CAPTURA ===== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-box" id="modal-box">
+    <img class="modal-tag" src="assets/tag.webp" alt="" aria-hidden="true">
+    <button class="x" type="button" aria-label="Fechar" data-close>&times;</button>
+    <form id="lead-form" novalidate>
+      <h3 id="modal-title">Preencha seus dados para acessar o catálogo da Black Friday</h3>
+      <div class="modal-cat" id="modal-cat"></div>
+      <div class="field">
+        <label for="f-nome">Nome</label>
+        <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+        <span class="err">Informe seu nome.</span>
+      </div>
+      <div class="field">
+        <label for="f-tel">Telefone com DDD (WhatsApp)</label>
+        <input id="f-tel" name="telefone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(00) 00000-0000" required>
+        <span class="err">Informe um telefone válido com DDD.</span>
+      </div>
+      <label class="check"><input type="checkbox" name="optin_comunicacoes"> Aceito receber ofertas e novidades da Flávio's (opcional).</label>
+      <input type="hidden" name="categoria" id="f-cat">
+      <button class="btn btn-primary" type="submit">Acessar catálogo</button>
+      <p class="privacy">Seus dados serão usados para liberar o catálogo. Veja a <a href="#" onclick="return false">Política de Privacidade</a>.</p>
+    </form>
+    <div class="success" role="status">
+      <div class="ok"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div>
+      <h3 style="margin-top:0">Catálogo liberado!</h3>
+      <p>Redirecionando para o catálogo de ofertas…</p>
+      <span class="tbd">[link do catálogo / página 2 de captura]</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Destino após envio do formulário (catálogo promocional / página 2)
+  var CATALOGO_URL = ''; // [INSERIR LINK DO CATÁLOGO]
+  var NOMES = {esportivo:'Esportivo',feminino:'Feminino',infantil:'Infantil',masculino:'Masculino',acessorios:'Acessórios'};
+
+  var modal=document.getElementById('modal'), box=document.getElementById('modal-box'),
+      form=document.getElementById('lead-form'), fCat=document.getElementById('f-cat'),
+      mCat=document.getElementById('modal-cat'), nome=document.getElementById('f-nome'),
+      tel=document.getElementById('f-tel'), lastFocus=null;
+
+  function open(cat){
+    lastFocus=document.activeElement;
+    fCat.value=cat||'';
+    mCat.innerHTML = NOMES[cat] ? '<span>'+NOMES[cat]+'</span>' : '';
+    box.classList.remove('done');
+    modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    setTimeout(function(){nome.focus()},250);
+    if(window.dataLayer) dataLayer.push({event:'abrir_formulario',categoria:cat});
+  }
+  function close(){
+    modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('.js-open').forEach(function(b){
+    b.addEventListener('click',function(){open(b.getAttribute('data-cat'))});
+  });
+  modal.addEventListener('click',function(e){ if(e.target===modal||e.target.hasAttribute('data-close')) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('open')) close(); });
+
+  // Máscara de telefone (00) 00000-0000
+  tel.addEventListener('input',function(){
+    var d=tel.value.replace(/\D/g,'').slice(0,11), o='';
+    if(d.length>0) o='('+d.slice(0,2);
+    if(d.length>=3) o+=') '+d.slice(2,d.length>10?7:6);
+    if(d.length>=7) o+='-'+d.slice(d.length>10?7:6);
+    tel.value=o;
+  });
+
+  // UTMs para mensurar a origem dos leads
+  var qs=new URLSearchParams(location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid'].forEach(function(k){
+    var i=document.createElement('input'); i.type='hidden'; i.name=k; i.value=qs.get(k)||''; form.appendChild(i);
+  });
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var okNome=nome.value.trim().length>1, okTel=tel.value.replace(/\D/g,'').length>=10;
+    nome.setAttribute('aria-invalid',!okNome); tel.setAttribute('aria-invalid',!okTel);
+    if(!okNome){nome.focus();return} if(!okTel){tel.focus();return}
+    var dados=Object.fromEntries(new FormData(form).entries());
+    // [INTEGRAÇÃO] enviar `dados` ao CRM / webhook aqui
+    if(window.dataLayer) dataLayer.push({event:'lead_catalogo',categoria:dados.categoria});
+    box.classList.add('done');
+    if(CATALOGO_URL) setTimeout(function(){location.href=CATALOGO_URL},1400);
+  });
+
+  // Barra fixa mobile após o hero
+  var mbar=document.getElementById('mbar'), hero=document.querySelector('.hero');
+  new IntersectionObserver(function(en){ mbar.classList.toggle('show',!en[0].isIntersecting) },{threshold:0}).observe(hero);
+
+  // Entrada suave
+  var io=new IntersectionObserver(function(en){ en.forEach(function(x){ if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)} }) },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
