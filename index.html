@@ -37,7 +37,6 @@ button{font:inherit;cursor:pointer}
 /* Tipografia de campanha: expandida + itálica, inspirada no logotipo */
 .display{font-stretch:125%;font-style:italic;font-weight:800;letter-spacing:-.02em;line-height:1.02;text-transform:uppercase}
 .kicker{display:inline-flex;align-items:center;gap:10px;font-stretch:110%;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.kicker::before{content:"";width:22px;height:3px;background:var(--accent);transform:skewX(-20deg)}
 h2.display{font-size:clamp(30px,4.4vw,52px);margin:14px 0 18px}
 .lead{color:var(--t2);font-size:clamp(16px,1.6vw,19px);max-width:640px}
 .hl{color:var(--accent)}
@@ -86,7 +85,7 @@ h2.display{font-size:clamp(30px,4.4vw,52px);margin:14px 0 18px}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(2deg)}}
 
 /* Faixa marquee */
-.marquee{margin-top:56px;background:var(--primary-hi);transform:rotate(-1.6deg);border-block:2px solid #0a0a0a;overflow:hidden;position:relative;z-index:2;width:104%;margin-left:-2%}
+.marquee{margin-top:56px;background:var(--primary-hi);transform:rotate(-1.6deg);border-block:2px solid #0a0a0a;overflow:hidden;position:relative;z-index:2;width:112%;margin-left:-6%;margin-bottom:36px}
 .marquee-track{display:flex;width:max-content;animation:marq 26s linear infinite}
 .marquee span{font-stretch:125%;font-style:italic;font-weight:800;font-size:20px;text-transform:uppercase;padding:14px 0;white-space:nowrap}
 .marquee span::after{content:"✦";margin:0 26px;color:var(--accent)}
