@@ -189,6 +189,14 @@ section{position:relative}
 .about h2{position:relative}
 .about .lead{margin:0 auto 40px}
 .brands .tbd-block{min-height:88px}
+.brands-label{text-align:center;font-family:var(--font-display);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--t2);margin:0 0 18px}
+.brands-strip{overflow:hidden;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.02);padding:26px 0;-webkit-mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.brands-track{display:flex;align-items:center;width:max-content;list-style:none;margin:0;padding:0;animation:marq 28s linear infinite}
+.brands-strip:hover .brands-track{animation-play-state:paused}
+.brands-track li{flex:none;padding:0 44px;display:flex;align-items:center}
+.brands-track img{height:var(--h,34px);width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.8;transition:opacity .2s}
+.brands-track li:hover img{opacity:1}
+@media (max-width:640px){.brands-strip{padding:20px 0}.brands-track li{padding:0 28px}.brands-track img{height:calc(var(--h,34px)*.75)}}
 
 /* FAQ */
 .faq-list{max-width:860px;margin:0 auto;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden}
@@ -524,7 +532,8 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
       <p class="lead">A rede reúne calçados, tênis, moda e acessórios para diferentes pessoas da família, com lojas físicas em cidades das duas regiões. Na loja, você pode experimentar o produto, conferir a numeração e levar a compra na hora, conforme disponibilidade.</p>
     </div>
     <div class="brands reveal">
-      <div class="tbd tbd-block">[SE APROVADO: INSERIR FAIXA COM MARCAS PARTICIPANTES DA BLACK FLÁVIO'S]</div>
+      <p class="brands-label">Marcas que você encontra na Flávio's</p>
+      <div class="brands-strip"><ul class="brands-track"><li><img src="assets/marca-nike.webp" style="--h:35px" alt="Nike" loading="lazy"></li><li><img src="assets/marca-adidas.webp" style="--h:44px" alt="Adidas" loading="lazy"></li><li><img src="assets/marca-fila.webp" style="--h:34px" alt="Fila" loading="lazy"></li><li><img src="assets/marca-mizuno.webp" style="--h:41px" alt="Mizuno" loading="lazy"></li><li><img src="assets/marca-puma.webp" style="--h:42px" alt="Puma" loading="lazy"></li><li><img src="assets/marca-democrata.webp" style="--h:21px" alt="Democrata" loading="lazy"></li><li><img src="assets/marca-vizzano.webp" style="--h:40px" alt="Vizzano" loading="lazy"></li><li aria-hidden="true"><img src="assets/marca-nike.webp" style="--h:35px" alt="" loading="lazy"></li><li aria-hidden="true"><img src="assets/marca-adidas.webp" style="--h:44px" alt="" loading="lazy"></li><li aria-hidden="true"><img src="assets/marca-fila.webp" style="--h:34px" alt="" loading="lazy"></li><li aria-hidden="true"><img src="assets/marca-mizuno.webp" style="--h:41px" alt="" loading="lazy"></li><li aria-hidden="true"><img src="assets/marca-puma.webp" style="--h:42px" alt="" loading="lazy"></li><li aria-hidden="true"><img src="assets/marca-democrata.webp" style="--h:21px" alt="" loading="lazy"></li><li aria-hidden="true"><img src="assets/marca-vizzano.webp" style="--h:40px" alt="" loading="lazy"></li></ul></div>
     </div>
   </div>
 </section>
