@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Black Friday Flávio's 2026</title>
-<meta name="description" content="Black Friday Flávio's: calçados, tênis, moda e acessórios feminino, masculino, infantil e esportivo. Confira os valores e acesse o catálogo completo.">
+<title>Black Flávio's 2026</title>
+<meta name="description" content="Black Flávio's: calçados, tênis, moda e acessórios feminino, masculino, infantil e esportivo. Confira os valores e acesse o catálogo completo.">
 <meta name="theme-color" content="#05070d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,6 +120,17 @@ section{position:relative}
 .cat:hover .cat-media img{transform:scale(1.06) rotate(-2deg)}
 .cat-media .flag{position:absolute;top:14px;left:14px;background:var(--navy);color:#fff;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:7px 11px;border-radius:999px;z-index:2}
 .cat-media .flag b{color:var(--accent)}
+.offers-sec{position:relative;overflow:hidden}
+.offers{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.offer{padding:0;border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;background:#071230;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.offer img{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover}
+.offer:hover{transform:translateY(-6px);border-color:rgba(47,107,255,.6);box-shadow:0 24px 50px -20px rgba(47,107,255,.55)}
+.pct{position:absolute;width:120px;height:auto;pointer-events:none;z-index:0;filter:drop-shadow(0 12px 24px rgba(0,0,0,.5))}
+.pct-a{top:40px;right:4%;transform:rotate(14deg)}
+.pct-b{bottom:40px;left:2%;width:90px;transform:rotate(-18deg);opacity:.85}
+.offers-sec .wrap{position:relative;z-index:1}
+@media (max-width:1100px){.offers{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:240px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin}.offer{scroll-snap-align:start}}
+@media (max-width:640px){.offers{grid-auto-columns:72%;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px}.pct{width:72px}.pct-b{display:none}}
 .cat-body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:6px;flex:1}
 .cat-name{font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:-.03em}
 .cat-price{font-weight:600;font-size:14px;color:#5a6b8f}
@@ -323,9 +334,9 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
   <div class="wrap hero-grid">
     <div class="reveal">
       <!-- COPY -->
-      <span class="kicker">BLACK FRIDAY FLÁVIO'S 2026</span>
+      <span class="kicker">BLACK FLÁVIO'S 2026</span>
       <h1 class="display">
-        <span class="bf">Black Friday Flávio's</span>
+        <span class="bf">Black Flávio's</span>
         <span class="from">com ofertas a partir de</span>
         <span class="price"><span>R$ <span class="tbd">[VALOR]</span></span></span>
       </h1>
@@ -342,14 +353,14 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
   <div class="ribbons" aria-hidden="true">
     <div class="marquee back">
     <div class="marquee-track">
-      <span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span>
-      <span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span>
+      <span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span>
+      <span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span>
     </div>
   </div>
     <div class="marquee front">
     <div class="marquee-track">
-      <span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span>
-      <span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span><span>BLACK FRIDAY FLÁVIO'S 2026</span>
+      <span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span>
+      <span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span><span>BLACK FLÁVIO'S 2026</span>
     </div>
   </div>
   </div>
@@ -362,23 +373,23 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
       <!-- COPY -->
       <span class="kicker">Escolha sua categoria</span>
       <h2 class="display">Tem oferta para o seu estilo, sua rotina e para <span class="hl">toda a família</span></h2>
-      <p class="lead">Esportivo, feminino, infantil, masculino e acessórios com preços a partir de R$ <span class="tbd">[VALOR]</span>. Escolha a categoria que você quer ver primeiro e confira os produtos que entraram na Black Friday.</p>
+      <p class="lead">Esportivo, feminino, infantil, masculino e acessórios com preços a partir de R$ <span class="tbd">[VALOR]</span>. Escolha a categoria que você quer ver primeiro e confira os produtos que entraram na Black Flávio's.</p>
     </div>
 
     <div class="cats">
       <!-- COPY: Esportivo -->
       <button class="cat reveal js-open" data-cat="esportivo">
-        <div class="cat-media"><span class="flag">Black <b>Friday</b></span><img src="assets/cat-esportivo.webp" alt="Tênis esportivo" loading="lazy" width="640" height="640"></div>
+        <div class="cat-media"><span class="flag">Black <b>Flávio's</b></span><img src="assets/cat-esportivo.webp" alt="Tênis esportivo" loading="lazy" width="640" height="640"></div>
         <div class="cat-body">
           <span class="cat-name">Esportivo</span>
           <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
-          <span class="cat-desc">Tênis e produtos esportivos selecionados para a Black Friday.</span>
+          <span class="cat-desc">Tênis e produtos esportivos selecionados para a Black Flávio's.</span>
           <span class="cat-cta">Ver ofertas de esportivos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </button>
       <!-- COPY: Feminino -->
       <button class="cat reveal js-open" data-cat="feminino">
-        <div class="cat-media"><span class="flag">Black <b>Friday</b></span><img src="assets/cat-feminino.webp" alt="Sandália feminina" loading="lazy" width="640" height="640"></div>
+        <div class="cat-media"><span class="flag">Black <b>Flávio's</b></span><img src="assets/cat-feminino.webp" alt="Sandália feminina" loading="lazy" width="640" height="640"></div>
         <div class="cat-body">
           <span class="cat-name">Feminino</span>
           <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
@@ -388,7 +399,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
       </button>
       <!-- COPY: Infantil -->
       <button class="cat reveal js-open" data-cat="infantil">
-        <div class="cat-media"><span class="flag">Black <b>Friday</b></span><img src="assets/cat-infantil.webp" alt="Sandália infantil" loading="lazy" width="640" height="640"></div>
+        <div class="cat-media"><span class="flag">Black <b>Flávio's</b></span><img src="assets/cat-infantil.webp" alt="Sandália infantil" loading="lazy" width="640" height="640"></div>
         <div class="cat-body">
           <span class="cat-name">Infantil</span>
           <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
@@ -398,17 +409,17 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
       </button>
       <!-- COPY: Masculino -->
       <button class="cat reveal js-open" data-cat="masculino">
-        <div class="cat-media"><span class="flag">Black <b>Friday</b></span><img src="assets/cat-masculino.webp" alt="Tênis masculino" loading="lazy" width="640" height="564"></div>
+        <div class="cat-media"><span class="flag">Black <b>Flávio's</b></span><img src="assets/cat-masculino.webp" alt="Tênis masculino" loading="lazy" width="640" height="564"></div>
         <div class="cat-body">
           <span class="cat-name">Masculino</span>
           <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
-          <span class="cat-desc">Tênis e calçados masculinos selecionados para a Black Friday.</span>
+          <span class="cat-desc">Tênis e calçados masculinos selecionados para a Black Flávio's.</span>
           <span class="cat-cta">Ver ofertas masculinas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </button>
       <!-- COPY: Acessórios -->
       <button class="cat reveal js-open" data-cat="acessorios">
-        <div class="cat-media"><span class="flag">Black <b>Friday</b></span><img src="assets/cat-acessorios.webp" alt="Mochila" loading="lazy" width="640" height="640"></div>
+        <div class="cat-media"><span class="flag">Black <b>Flávio's</b></span><img src="assets/cat-acessorios.webp" alt="Mochila" loading="lazy" width="640" height="640"></div>
         <div class="cat-body">
           <span class="cat-name">Acessórios</span>
           <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
@@ -420,6 +431,25 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
   </div>
 </section>
 
+<!-- ===== SEÇÃO 02B | OFERTAS DA SEMANA (artes do cliente, Drive SEMANA 01) ===== -->
+<section class="sec offers-sec" id="ofertas">
+  <img class="pct pct-a" src="assets/selo-pct.webp" alt="" aria-hidden="true">
+  <img class="pct pct-b" src="assets/selo-pct.webp" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">BLACK FLÁVIO'S 2026</span>
+      <h2 class="display"><span class="tbd">[TÍTULO DA SEÇÃO DE OFERTAS]</span></h2>
+    </div>
+    <div class="offers">
+      <button class="offer reveal js-open" data-cat="oferta-5"><img src="assets/oferta-5.webp" alt="Tênis Asics Thunderlight 2: de R$ 459,90 por R$ 259,90 cada ou 5x de R$ 51,98" loading="lazy" width="540" height="960"></button>
+      <button class="offer reveal js-open" data-cat="oferta-2"><img src="assets/oferta-2.webp" alt="Tênis Via Marte: de R$ 249,90 por R$ 159,90 cada ou 5x de R$ 31,98" loading="lazy" width="540" height="960"></button>
+      <button class="offer reveal js-open" data-cat="oferta-1"><img src="assets/oferta-1.webp" alt="Sandália Moleca: de R$ 149,90 por R$ 89,90 cada ou 5x de R$ 17,98" loading="lazy" width="540" height="960"></button>
+      <button class="offer reveal js-open" data-cat="oferta-3"><img src="assets/oferta-3.webp" alt="Sandália Molekinha, numeração 25 ao 36: de R$ 129,90 por R$ 79,90 ou 5x de R$ 15,98" loading="lazy" width="540" height="960"></button>
+      <button class="offer reveal js-open" data-cat="oferta-4"><img src="assets/oferta-4.webp" alt="Mocassim BR Sport: de R$ 179,90 por R$ 129,90 ou 5x de R$ 25,98" loading="lazy" width="540" height="960"></button>
+    </div>
+  </div>
+</section>
+
 <!-- ===== SEÇÃO 03 | FACILIDADES DE PAGAMENTO ===== -->
 <section class="sec pay" id="cartao">
   <div class="wrap">
@@ -427,7 +457,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
       <div>
         <!-- COPY -->
         <span class="kicker">Facilidades de pagamento</span>
-        <h2 class="display">Preço de Black Friday com condições do <span class="hl">Cartão Flávio's</span></h2>
+        <h2 class="display">Preço de Black Flávio's com condições do <span class="hl">Cartão Flávio's</span></h2>
         <p class="lead">Os produtos participantes também poderão contar com condições próprias de pagamento no Cartão Flávio's.</p>
         <div class="pay-cond">
           <p>Até <span class="tbd">[X]</span>x <span class="tbd">[CONDIÇÃO APROVADA]</span> no Cartão Flávio's</p>
@@ -449,7 +479,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
   <div class="wrap stores">
     <div class="reveal">
       <!-- COPY -->
-      <span class="kicker">Black friday nas lojas Flávio’s</span>
+      <span class="kicker">Black Flávio's nas lojas Flávio’s</span>
       <h2 class="display">Encontre uma loja participante e confira sua <span class="hl">numeração</span></h2>
       <p class="lead">As ofertas são destinadas às unidades físicas participantes em Goiás e Minas Gerais. Consulte as cidades e lojas da campanha para experimentar os produtos, verificar a numeração e comprar conforme a disponibilidade da unidade.</p>
       <a class="btn btn-blue" href="#finder">Consultar lojas participantes</a>
@@ -482,7 +512,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
       <p class="lead">A rede reúne calçados, tênis, moda e acessórios para diferentes pessoas da família, com lojas físicas em cidades das duas regiões. Na loja, você pode experimentar o produto, conferir a numeração e levar a compra na hora, conforme disponibilidade.</p>
     </div>
     <div class="brands reveal">
-      <div class="tbd tbd-block">[SE APROVADO: INSERIR FAIXA COM MARCAS PARTICIPANTES DA BLACK FRIDAY]</div>
+      <div class="tbd tbd-block">[SE APROVADO: INSERIR FAIXA COM MARCAS PARTICIPANTES DA BLACK FLÁVIO'S]</div>
     </div>
   </div>
 </section>
@@ -517,7 +547,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
       <details>
         <summary>Posso utilizar o Cartão Flávio's? <span class="ic">+</span></summary>
         <div class="ans">
-          <p>Sim, conforme as condições aprovadas para a Black Friday e as regras de concessão e utilização do cartão.</p>
+          <p>Sim, conforme as condições aprovadas para a Black Flávio's e as regras de concessão e utilização do cartão.</p>
           <span class="tbd">[inserir o parcelamento definitivo após validação.]</span>
         </div>
       </details>
@@ -571,7 +601,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
         <div class="item"><h4>Lojas participantes</h4><span class="tbd">[INSERIR LINK]</span></div>
       </div>
       <div>
-        <div class="item"><h4>Regulamento da Black Friday</h4><span class="tbd">[INSERIR LINK / CONDIÇÕES APROVADAS]</span></div>
+        <div class="item"><h4>Regulamento da Black Flávio's</h4><span class="tbd">[INSERIR LINK / CONDIÇÕES APROVADAS]</span></div>
       </div>
     </div>
     <div class="foot-legal">
@@ -593,7 +623,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
     <img class="modal-tag" src="assets/tag.webp" alt="" aria-hidden="true">
     <button class="x" type="button" aria-label="Fechar" data-close>&times;</button>
     <form id="lead-form" novalidate>
-      <h3 id="modal-title">Preencha seus dados para acessar o catálogo da Black Friday</h3>
+      <h3 id="modal-title">Preencha seus dados para acessar o catálogo da Black Flávio's</h3>
       <div class="modal-cat" id="modal-cat"></div>
       <div class="field">
         <label for="f-nome">Nome</label>
