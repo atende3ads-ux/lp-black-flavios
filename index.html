@@ -148,6 +148,15 @@ section{position:relative}
 .cat-price{font-weight:600;font-size:14px;color:#5a6b8f}
 .cat-price strong{display:block;font-family:var(--font-display);font-weight:800;font-size:34px;color:var(--primary);letter-spacing:-.03em;line-height:1.1;margin-top:2px}
 .cat-price .tbd{font-size:.55em}
+.cat-media.offer-media{background:#0f2246}
+.cat-media img.is-offer{width:100%;height:100%;object-fit:cover}
+.cat:nth-child(4) .cat-media.offer-media{background:linear-gradient(180deg,#142233,#162f4f)}
+.cat:nth-child(4) .cat-media img.is-offer{object-fit:contain;-webkit-mask:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent)}
+.cat:hover .cat-media img.is-offer{transform:scale(1.05)}
+.cat-prod{display:block;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:4px}
+.cat-price s{display:block;color:#8a97b3;font-size:13px}
+.cat-price strong small{font-size:.5em;font-weight:700;margin-left:.2em;letter-spacing:0}
+.cat-parc{display:block;font-weight:600;color:#3b4b70;font-size:14px;margin-top:2px}
 .cat .tbd{color:#7a5a00;border-color:#e0ad00;background:#fff6d6}
 .cat-desc{color:#5a6b8f;font-size:15px;margin:6px 0 18px}
 .cat-cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:space-between;gap:10px;background:var(--ice);color:var(--navy);border:1px solid var(--ice);border-radius:999px;padding:13px 18px;font-weight:700;font-size:14px;transition:background .2s ease}
@@ -309,6 +318,9 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
   .cat-name{font-size:18px}
   .cat-price{font-size:13px}
   .cat-price strong{font-size:24px}
+  .cat-price strong:has(small){font-size:20px;white-space:nowrap}
+  .cat-price strong small{display:block;margin:0;font-size:.6em}
+  .cat-prod{font-size:13px}
   .cat-desc{font-size:13px;margin:4px 0 14px}
   .cat-cta{padding:11px 14px;font-size:12.5px}
   .cat-cta svg{display:none}
@@ -399,40 +411,40 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
     <div class="cats">
       <!-- COPY: Esportivo -->
       <button class="cat reveal js-open" data-cat="esportivo">
-        <div class="cat-media"><span class="flag">Black <b>Flávio's</b></span><img src="assets/cat-esportivo.webp" alt="Tênis esportivo" loading="lazy" width="640" height="640"></div>
+        <div class="cat-media offer-media"><span class="flag">Black <b>Flávio's</b></span><img class="is-offer" src="assets/oferta-cat-esportivo.webp" alt="Tênis Asics Thunderlight 2" loading="lazy" width="800" height="600"></div>
         <div class="cat-body">
           <span class="cat-name">Esportivo</span>
-          <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
+          <span class="cat-price"><span class="cat-prod">Tênis Asics Thunderlight 2</span><s>De R$ 459,90</s><strong>por R$ 259,90<small> cada</small></strong><span class="cat-parc">ou 5x de R$ 51,98</span></span>
           <span class="cat-desc">Tênis e produtos esportivos selecionados para a Black Flávio's.</span>
           <span class="cat-cta">Ver ofertas de esportivos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </button>
       <!-- COPY: Feminino -->
       <button class="cat reveal js-open" data-cat="feminino">
-        <div class="cat-media"><span class="flag">Black <b>Flávio's</b></span><img src="assets/cat-feminino.webp" alt="Sandália feminina" loading="lazy" width="640" height="640"></div>
+        <div class="cat-media offer-media"><span class="flag">Black <b>Flávio's</b></span><img class="is-offer" src="assets/oferta-cat-feminino.webp" alt="Sandália Moleca" loading="lazy" width="800" height="600"></div>
         <div class="cat-body">
           <span class="cat-name">Feminino</span>
-          <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
+          <span class="cat-price"><span class="cat-prod">Sandália Moleca</span><s>De R$ 149,90</s><strong>por R$ 89,90<small> cada</small></strong><span class="cat-parc">ou 5x de R$ 17,98</span></span>
           <span class="cat-desc">Calçados femininos participantes da campanha.</span>
           <span class="cat-cta">Ver ofertas femininas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </button>
       <!-- COPY: Infantil -->
       <button class="cat reveal js-open" data-cat="infantil">
-        <div class="cat-media"><span class="flag">Black <b>Flávio's</b></span><img src="assets/cat-infantil.webp" alt="Sandália infantil" loading="lazy" width="640" height="640"></div>
+        <div class="cat-media offer-media"><span class="flag">Black <b>Flávio's</b></span><img class="is-offer" src="assets/oferta-cat-infantil.webp" alt="Sandália Molekinha" loading="lazy" width="800" height="600"></div>
         <div class="cat-body">
           <span class="cat-name">Infantil</span>
-          <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
+          <span class="cat-price"><span class="cat-prod">Sandália Molekinha</span><s>De R$ 129,90</s><strong>por R$ 79,90<small></small></strong><span class="cat-parc">ou 5x de R$ 15,98</span></span>
           <span class="cat-desc">Calçados infantis em diferentes modelos e numerações, conforme disponibilidade.</span>
           <span class="cat-cta">Ver ofertas infantis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </button>
       <!-- COPY: Masculino -->
       <button class="cat reveal js-open" data-cat="masculino">
-        <div class="cat-media"><span class="flag">Black <b>Flávio's</b></span><img src="assets/cat-masculino.webp" alt="Tênis masculino" loading="lazy" width="640" height="564"></div>
+        <div class="cat-media offer-media"><span class="flag">Black <b>Flávio's</b></span><img class="is-offer" src="assets/oferta-cat-masculino.webp" alt="Mocassim BR Sport" loading="lazy" width="800" height="600"></div>
         <div class="cat-body">
           <span class="cat-name">Masculino</span>
-          <span class="cat-price">A partir de <strong>R$ <span class="tbd price-tbd">[VALOR]</span></strong></span>
+          <span class="cat-price"><span class="cat-prod">Mocassim BR Sport</span><s>De R$ 179,90</s><strong>por R$ 129,90<small></small></strong><span class="cat-parc">ou 5x de R$ 25,98</span></span>
           <span class="cat-desc">Tênis e calçados masculinos selecionados para a Black Flávio's.</span>
           <span class="cat-cta">Ver ofertas masculinas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
