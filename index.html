@@ -173,6 +173,9 @@ section{position:relative}
 .pay-cond{margin:28px 0 14px;padding:22px 24px;border-radius:16px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.14)}
 .pay-cond p{font-family:var(--font-display);font-weight:700;letter-spacing:-.02em;font-size:clamp(20px,2.4vw,28px);line-height:1.2}
 .pay-cond .tbd{font-size:.6em}
+.pay-cond sup{font-size:.55em;color:var(--accent);margin-left:.05em}
+.pay-cond p.pay-legal{font-family:var(--font);font-weight:500;font-size:13px;letter-spacing:0;line-height:1.5;color:#c3cdea;margin-top:10px}
+.pay-legal a{color:#fff;text-decoration:underline;text-underline-offset:2px}
 .pay-note{color:#c3cdea;font-size:15px;margin-bottom:28px;max-width:520px}
 .card-visual{position:relative;aspect-ratio:1.586;max-width:400px;width:100%;margin-left:auto;border-radius:22px;padding:26px;background:linear-gradient(130deg,#0d0f16 0%,#1c2236 60%,#0d0f16 100%);border:1px solid rgba(255,255,255,.16);box-shadow:0 40px 70px -24px rgba(0,0,0,.7);transform:rotate(-6deg);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
 .card-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.12) 45%,transparent 60%)}
@@ -492,7 +495,8 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
         <h2 class="display">Preço de Black Flávio's com condições do <span class="hl">Cartão Flávio's</span></h2>
         <p class="lead">Os produtos participantes também poderão contar com condições próprias de pagamento no Cartão Flávio's.</p>
         <div class="pay-cond">
-          <p>Até <span class="tbd">[X]</span>x <span class="tbd">[CONDIÇÃO APROVADA]</span> no Cartão Flávio's</p>
+          <p>Até 8x<sup>*</sup> no Cartão Flávio's</p>
+          <p class="pay-legal">*Parcele em 5x sem juros ou em até 8x fixas, confira taxas e tarifas no site: <a href="https://www.cartaoflavios.com.br" target="_blank" rel="noopener">www.cartaoflavios.com.br</a></p>
         </div>
         <p class="pay-note">O cartão permite fazer a compra na Flávio's sem utilizar o limite de outros cartões, conforme as regras de concessão e utilização.</p>
         <button class="btn btn-primary js-open" data-cat="cartao">Quero ver as ofertas</button>
@@ -581,7 +585,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
         <summary>Posso utilizar o Cartão Flávio's? <span class="ic">+</span></summary>
         <div class="ans">
           <p>Sim, conforme as condições aprovadas para a Black Flávio's e as regras de concessão e utilização do cartão.</p>
-          <span class="tbd">[inserir o parcelamento definitivo após validação.]</span>
+          <p>Parcele em 5x sem juros ou em até 8x fixas, confira taxas e tarifas no site: <a href="https://www.cartaoflavios.com.br" target="_blank" rel="noopener">www.cartaoflavios.com.br</a></p>
         </div>
       </details>
       <details>
