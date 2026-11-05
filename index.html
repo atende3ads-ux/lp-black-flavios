@@ -165,8 +165,8 @@ section{position:relative}
 
 /* Cartão Flávio's */
 .pay{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}
-.pay-card{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:56px;border-radius:28px;background:linear-gradient(135deg,var(--primary) 0%,#0b2a7a 55%,#071233 100%);overflow:hidden;isolation:isolate}
-.pay-card::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(47,107,255,.7),transparent);z-index:-1}
+.pay-card{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:56px;border-radius:28px;background:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.4px) 0 0/14px 14px,linear-gradient(160deg,#0a1230 0%,#060b1d 100%);border:1px solid rgba(255,255,255,.08);overflow:hidden;isolation:isolate}
+.pay-card::before{content:"";position:absolute;right:-60px;bottom:-160px;width:620px;height:620px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,194,14,.22),transparent);z-index:-1}
 .pay-card .kicker{color:var(--accent)}
 .pay-card h2.display{font-size:clamp(28px,3.4vw,44px)}
 .pay-card .lead{color:#d6def5}
@@ -178,8 +178,8 @@ section{position:relative}
 .pay-legal a{color:#fff;text-decoration:underline;text-underline-offset:2px}
 .pay-note{color:#c3cdea;font-size:15px;margin-bottom:28px;max-width:520px}
 .card-visual{position:relative;aspect-ratio:1.586;max-width:400px;width:100%;margin-left:auto;border-radius:22px;padding:26px;background:linear-gradient(130deg,#0d0f16 0%,#1c2236 60%,#0d0f16 100%);border:1px solid rgba(255,255,255,.16);box-shadow:0 40px 70px -24px rgba(0,0,0,.7);transform:rotate(-6deg);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
-.card-official{display:flex;justify-content:center;align-items:center}
-.card-official img{height:auto;width:auto;max-height:500px;max-width:100%;filter:drop-shadow(0 30px 50px rgba(0,0,0,.45))}
+.card-official{display:flex;justify-content:center;align-items:flex-end;align-self:end;margin:0 0 -56px}
+.card-official img{height:auto;width:min(620px,118%);max-width:none;margin-right:-8%}
 .card-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.12) 45%,transparent 60%)}
 .card-visual img{height:24px;width:auto}
 .card-chip{width:46px;height:34px;border-radius:7px;background:linear-gradient(135deg,#f9d976,#c79a2b)}
@@ -302,7 +302,8 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
   .pay-card{grid-template-columns:1fr;padding:36px 24px;gap:20px}
   .card-visual{margin:10px auto 0;max-width:320px;order:-1}
   .card-official{order:-1}
-  .card-official img{max-height:340px}
+  .card-official{margin:-8px -24px 0}
+  .card-official img{width:100%;max-width:440px;margin:0 auto}
   .stores{grid-template-columns:1fr;gap:28px}
   .foot-grid{grid-template-columns:1fr 1fr}
   .foot-grid>div:first-child{grid-column:span 2}
@@ -505,7 +506,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
         <p class="pay-note">O cartão permite fazer a compra na Flávio's sem utilizar o limite de outros cartões, conforme as regras de concessão e utilização.</p>
         <button class="btn btn-primary js-open" data-cat="cartao">Quero ver as ofertas</button>
       </div>
-      <div class="card-official"><img src="assets/cartao-flavios.webp" alt="Cartão Flávio's e o app do Cartão Digital" width="514" height="937" loading="lazy"></div>
+      <div class="card-official"><img src="assets/cartao-modelo.webp" alt="Modelo segurando o celular com o Cartão Flávio's no app do Cartão Digital" width="900" height="980" loading="lazy"></div>
     </div>
   </div>
 </section>
