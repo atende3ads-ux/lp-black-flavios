@@ -690,13 +690,13 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
       <label class="check"><input type="checkbox" name="optin_comunicacoes"> Aceito receber ofertas e novidades da Flávio's (opcional).</label>
       <input type="hidden" name="categoria" id="f-cat">
       <button class="btn btn-primary" type="submit">Acessar catálogo</button>
-      <p class="privacy">Seus dados serão usados para liberar o catálogo. Veja a <a href="#" onclick="return false">Política de Privacidade</a>.</p>
+      <p class="privacy">Seus dados serão usados para liberar o catálogo. Veja a <a href="https://www.flavios.com.br/aviso-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
     </form>
     <div class="success" role="status">
       <div class="ok"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div>
       <h3 style="margin-top:0">Catálogo liberado!</h3>
       <p>Redirecionando para o catálogo de ofertas…</p>
-      <span class="tbd">[link do catálogo / página 2 de captura]</span>
+      <a class="btn btn-primary" href="https://flavioscalcados.hflip.co/BLACK-FLAVIOS.html">Abrir catálogo agora</a>
     </div>
   </div>
 </div>
@@ -704,7 +704,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
 <script>
 (function(){
   // Destino após envio do formulário (catálogo promocional / página 2)
-  var CATALOGO_URL = ''; // [INSERIR LINK DO CATÁLOGO]
+  var CATALOGO_URL='https://flavioscalcados.hflip.co/BLACK-FLAVIOS.html';
   var NOMES = {esportivo:'Esportivo',feminino:'Feminino',infantil:'Infantil',masculino:'Masculino',acessorios:'Acessórios'};
 
   var modal=document.getElementById('modal'), box=document.getElementById('modal-box'),
