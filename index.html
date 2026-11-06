@@ -194,6 +194,15 @@ section{position:relative}
 .finder-row{display:flex;gap:10px;margin-bottom:18px}
 .finder select{flex:1;appearance:none;-webkit-appearance:none;background:var(--surface-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23b9c2d9' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 18px center;border:1px solid var(--border);border-radius:12px;color:var(--t1);padding:15px 44px 15px 16px;font:inherit;font-size:16px}
 .finder .tbd-block{min-height:150px;margin-bottom:16px}
+.store-count{font-size:13px;color:var(--t3);margin:-6px 0 10px}
+.store-list{list-style:none;margin:0 0 18px;padding:0 6px 0 0;max-height:380px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--surface-2) transparent}
+.store-list li{padding:14px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:start}
+.store-list li:last-child{border-bottom:0}
+.store-list b{font-family:var(--font-display);font-weight:700;color:var(--t1);font-size:16px}
+.store-list span{grid-column:1;color:var(--t2);font-size:14px;line-height:1.45}
+.store-list a{grid-column:2;grid-row:1/3;align-self:center;white-space:nowrap;font-size:13px;font-weight:700;color:var(--accent);text-decoration:none;border:1px solid rgba(255,194,14,.4);border-radius:999px;padding:7px 12px}
+.store-list a:hover{background:var(--accent);color:#0a0a0a}
+@media (max-width:640px){.store-list li{grid-template-columns:1fr}.store-list a{grid-column:1;grid-row:auto;justify-self:start;margin-top:6px}.store-list{max-height:420px}}
 .finder-note{display:flex;gap:10px;color:var(--t3);font-size:14px}
 .finder-note svg{flex:none;width:18px;height:18px;margin-top:2px;color:var(--primary-hi)}
 
@@ -527,11 +536,12 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
     <div class="finder reveal" id="finder">
       <p class="finder-label">Lojas participantes</p>
       <div class="finder-row">
-        <select aria-label="Cidade" disabled>
-          <option>GO / MG</option>
+        <select id="store-city" aria-label="Filtrar lojas por cidade">
+          <option value="">Todas as cidades</option>
         </select>
       </div>
-      <div class="tbd tbd-block">[INSERIR BUSCA SIMPLES / LISTA DE CIDADES E UNIDADES PARTICIPANTES]</div>
+      <p class="store-count" id="store-count" aria-live="polite"></p>
+      <ul class="store-list" id="store-list"></ul>
       <p class="finder-note">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01" stroke-linecap="round"/></svg>
         <!-- COPY -->
@@ -638,7 +648,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
       </div>
       <div>
         <div class="item"><h4>Política de Privacidade</h4><a href="https://www.flavios.com.br/aviso-de-privacidade" target="_blank" rel="noopener">Aviso de privacidade</a></div>
-        <div class="item"><h4>Lojas participantes</h4><span class="tbd">[INSERIR LINK]</span></div>
+        <div class="item"><h4>Lojas participantes</h4><a href="#finder">Ver lojas e endereços</a></div>
       </div>
       <div>
         <div class="item"><h4>Regulamento da Black Flávio's</h4><a href="#regulamento">Ver condições da promoção</a></div>
@@ -757,6 +767,22 @@ footer{border-top:1px solid var(--border);padding:64px 0 120px;color:var(--t3);f
   // Entrada suave
   var io=new IntersectionObserver(function(en){ en.forEach(function(x){ if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)} }) },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+<script>
+(function(){
+  var S=[{"n": "Flávio's Campinas (Matriz)", "a": "Av. 24 de Outubro nº 1383 Qd 39 Lt 01, Setor Campinas - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Vila Nova", "a": "Pça. Vereador Boa Ventura nº 177 Qd 27 Lt 14, Vila Nova - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Centro", "a": "Rua 4 nº 426 Qd. 55 Lt. 91, Setor Central - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Goiânia Shopping", "a": "Av. T-10 nº 1300 Qd 10/18 LUC 275, Setor Bueno - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Buriti Shopping", "a": "Av. Rio Verde Q.102/104 LUC 52/54 - 2º expansão, Vila São Tomaz - Aparecida de Goiânia - GO", "c": "Aparecida de Goiânia", "u": "GO"}, {"n": "Flávio's Flamboyant", "a": "Av. Deputado Jamel Cecilio nº 3300 Qd. B-34 Lt. 02-E Piso 1 LUC P-29/33/39, Jardim Goiás - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Garavelo", "a": "Rua 19-C Qd. 112 Lt. 16, Setor Garavelo - Aparecida de Goiânia - GO", "c": "Aparecida de Goiânia", "u": "GO"}, {"n": "Flávio's Araguaia", "a": "Rua 44 nº 399 Qd. Area Lt. Area ESC L 71-77-84-88, Setor Central - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Portal", "a": "Av. Anhanguera c/Perimetral Norte nº 14.404 Qd 40 Lt 1/6 LUC 124/125 - Piso Térreo, Setor Capuava - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Anápolis", "a": "Rua Engenheiro Portela nº 16, Setor Central - Anápolis - GO", "c": "Anápolis", "u": "GO"}, {"n": "Flávio's Brasil Park", "a": "Av. Brasil nº 505 Lj A-16-17-18-19 Piso 1, Vila Santana - Anápolis - GO", "c": "Anápolis", "u": "GO"}, {"n": "Flávio's Senador Canedo", "a": "Av. Dom Emmanuel de Oliveira Qd. 01G Lt. 01, Jardim Todos os Santos - Senador Canedo - GO", "c": "Senador Canedo", "u": "GO"}, {"n": "Flávio's Rio Verde I", "a": "Av. Presidente Vargas nº 863, Setor Central - Rio Verde - GO", "c": "Rio Verde", "u": "GO"}, {"n": "Flávio's Portal Sul", "a": "Av. dos Ipês nº 70 Qd Area Lt 02 Luc's 48 a 51, Jardins Lisboa - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Rio Verde II", "a": "Av. Presidente Getulio Vargas nº 748, Setor Central - Rio Verde - GO", "c": "Rio Verde", "u": "GO"}, {"n": "Flávio's Cidade Livre", "a": "Av. Independência Qd.01 Lt.01, Cidade Livre - Aparecida de Goiânia - GO", "c": "Aparecida de Goiânia", "u": "GO"}, {"n": "Flávio's Passeio das Águas", "a": "Av. Perimetral Norte nº 8303 Qd. Area Lt. B Loja 64/64A Piso 2, Fazenda Crimeia Caveiras - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Loja Trindade", "a": "Av. Manoel Monteiro c/ Rua Coronel João Braz, nº 797, Qd 34 Lt 01 Loja 01, Centro - Trindade - GO", "c": "Trindade", "u": "GO"}, {"n": "Flávio's Buriti Shopping Rio Verde", "a": "Rua O Quadras: 02,09,14,15,15A Lts:15/19,01/20,01/06,01,01 St.06 nº 1.044, Jardim Campestre - Rio Verde - GO", "c": "Rio Verde", "u": "GO"}, {"n": "Flávio's Cerrado", "a": "Av Anhanguera N10790 Qd 582 Lt B1, Area B1 Terreo SUC 0104/0105/0106S, Bairro Aeroviario - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Aparecida", "a": "AV Indepedencia QD AREA LT 01 S/N LUC ML04/102/103/104, Setor Serra Dourada - Aparecida de Goiânia - GO", "c": "Aparecida de Goiânia", "u": "GO"}, {"n": "Flávio's Itumbiara", "a": "Praça da Republica Nº 115 Qd 63 LT X-1, Centro - Itumbiara - GO", "c": "Itumbiara", "u": "GO"}, {"n": "Flávio's Anhanguera II", "a": "Av Anhanguera N 4748 Qd 52 Lt 103, Centro - Goiânia - GO", "c": "Goiânia", "u": "GO"}, {"n": "Flávio's Jataí", "a": "Av Brasil Nº 674 Quadra 15 Lote 16, Centro - Jataí - GO", "c": "Jataí", "u": "GO"}, {"n": "Flávio's Tubal Vilela", "a": "Praça Tubal Vilela, 55, CENTRO - Uberlândia - MG", "c": "Uberlândia", "u": "MG"}, {"n": "Flávio's Luizote", "a": "Av. José Fonseca e Silva, 1234, Jardim Patrícia - Uberlândia - MG", "c": "Uberlândia", "u": "MG"}, {"n": "Flávio's Itaú Power Shopping", "a": "Av. General David Sarnoff, 5160 Andar 1 Loja 61, 62 e 63, Cidade Industrial - Contagem - MG", "c": "Contagem", "u": "MG"}];
+  var sel=document.getElementById('store-city'),ul=document.getElementById('store-list'),ct=document.getElementById('store-count');
+  if(!sel)return;
+  var cities={};S.forEach(function(x){var k=x.c+' / '+x.u;cities[k]=(cities[k]||0)+1});
+  Object.keys(cities).sort(function(a,b){return a.localeCompare(b,'pt')}).forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=k+' ('+cities[k]+')';sel.appendChild(o)});
+  function esc(t){return t.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function render(){
+    var v=sel.value,list=S.filter(function(x){return !v||(x.c+' / '+x.u)===v});
+    ct.textContent=list.length+(list.length===1?' loja':' lojas')+(v?' em '+v:' em Goiás e Minas Gerais');
+    ul.innerHTML=list.map(function(x){var q=encodeURIComponent(x.n+', '+x.a);return '<li><b>'+esc(x.n)+'</b><span>'+esc(x.a)+'</span><a href="https://www.google.com/maps/search/?api=1&query='+q+'" target="_blank" rel="noopener">Como chegar</a></li>'}).join('');
+  }
+  sel.addEventListener('change',render);render();
 })();
 </script>
 </body>
